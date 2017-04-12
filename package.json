@@ -13,7 +13,8 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && nyc ava"
+    "prepublish": "npm run build && cd ./release",
+    "build": "tsc -p tsconfig.json"
   },
   "files": [
     "index.js"
@@ -25,6 +26,7 @@
   "devDependencies": {
     "ava": "^0.17.0",
     "nyc": "^10.0.0",
+    "typescript": "2.2.2",
     "xo": "^0.17.0"
   }
 }
